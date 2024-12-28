@@ -1,0 +1,11 @@
+hooks_file = '$BASE_DIR/ft.vim'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+[[plugins]]
+repo = 'HealsCodes/vim-gas'
+[[plugins]]
+repo = 'cespare/vim-toml'
+[[plugins]]
+repo = 'rbtnn/vim-vimscript_indentexpr'
+

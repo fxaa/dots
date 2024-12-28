@@ -1,0 +1,72 @@
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+depends = ['ddu.vim']
+on_source = ['ddu.vim']
+hooks_file = '$BASE_DIR/deol.vim'
+
+[[plugins]]
+repo = 'Shougo/junkfile.vim'
+on_source = ['ddu.vim']
+hook_add = '''
+  nnoremap se <Cmd>Ddu junkfile -source-option-junkfile-volatile<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/cmdline.vim'
+on_source = ['ddu.vim']
+hook_source = '''
+  call cmdline#set_option(#{
+    \   highlight_cursor: 'CmdlineCursor',
+    \   highlight_window: 'None',
+    \ })
+'''
+
+[[plugins]]
+repo = 'kana/vim-niceblock'
+on_map = { x = '<Plug>' }
+hook_add = '''
+  xnoremap I  <Plug>(niceblock-I)
+  xnoremap A  <Plug>(niceblock-A)
+'''
+
+[[plugins]]
+repo = 'thinca/vim-qfreplace'
+on_ft = ['qf']
+[plugins.ftplugin]
+qf = '''
+  nnoremap <buffer> r <Cmd>Qfreplace<CR>
+'''
+
+[[plugins]]
+repo = 'itchyny/vim-qfedit'
+on_ft = ['qf']
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+depends = 'vim-operator-user'
+on_map = { n = '<Plug>' }
+hook_add = '''
+  nnoremap sa <Plug>(operator-surround-append)
+  nnoremap sd <Plug>(operator-surround-delete)a
+  nnoremap sr <Plug>(operator-surround-replace)a
+  nnoremap sc <Plug>(operator-surround-replace)a
+'''
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+on_ft = ['markdown']
+lua_source = '''
+call mkdp#util#install()
+'''
+
+[[plugins]]
+repo = 'lambdalisue/vim-findent'
+
+[[plugins]]
+repo = 'dag/vim2hs'
+on_ft = 'haskell'
+hook_source = '''
+  let g:haskell_conceal = v:false
+'''
+
+
