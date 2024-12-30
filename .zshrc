@@ -72,12 +72,6 @@ if [ -x /opt/homebrew/bin/mise ]; then
     source /tmp/mise.cache
 fi
 # }}}
-# brazil aliases {{{
-alias bb=brazil-build
-alias brc='brazil-recursive-cmd'
-alias bws='brazil ws'
-alias bbr='brc brazil-build'
-# }}}
 # git aliases {{{
 alias gitau="git update-index --assume-unchanged"
 alias logadog="git log --color --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit ; echo \"A parting dog for your troubles: 🐕\""
@@ -96,3 +90,12 @@ alias dircolors=gdircolors
 alias isonow='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 # }}}
 
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/disco/.opam/opam-init/init.zsh' ]] || source '/Users/disco/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration

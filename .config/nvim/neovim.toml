@@ -142,3 +142,10 @@ lua_source = '''
 repo = 'rcarriga/nvim-notify'
 on_lua = 'notify'
 
+[[plugins]]
+repo = 'saecki/crates.nvim'
+on_path = 'Cargo.toml'
+lua_source = '''
+  require('crates').setup()
+'''
+
