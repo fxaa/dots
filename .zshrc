@@ -7,6 +7,7 @@ BINDIRS=(
         $HOME/.cargo/bin
         $HOME/.toolbox/bin
 	$HOME/.local/share/mise/shims
+        /opt/homebrew/opt/curl/bin
 )
 
 for BINDIR in "${BINDIRS[@]}"
@@ -19,8 +20,6 @@ export MOCWORD_DATA=~/.local/mocword.sqlite
 
 export EDITOR=nvim
 export VISUAL=nvim
-export NODE_OPTIONS="--max_old_space_size=8192 --openssl-legacy-provider"
-export NODE_GYP_FORCE_PYTHON=~/.local/share/mise/installs/python/3.10/bin/python3.10
 # brew shellenv results
 export HOMEBREW_PREFIX="/opt/homebrew"
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
@@ -28,6 +27,9 @@ export HOMEBREW_REPOSITORY="/opt/homebrew"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
 export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/curl/lib/pkgconfig"
 # }}}
 # zsh {{{
 setopt no_beep
@@ -55,9 +57,6 @@ autoload -Uz compinit && compinit -C
 autoload -U colors && colors
 # }}}
 # utils {{{
-source ~/.shell/util.zsh
-source /Users/dlewisn/.brazil_completion/zsh_completion
-
 if [ -x ~/.local/share/sheldon ]; then
     if ! [ -f /tmp/sheldon.cache ]; then
 	sheldon source > /tmp/sheldon.cache
@@ -65,9 +64,9 @@ if [ -x ~/.local/share/sheldon ]; then
     fi
     source /tmp/sheldon.cache
 fi
-if [ -x ~/.local/bin/mise ]; then
+if [ -x /opt/homebrew/bin/mise ]; then
     if ! [ -f /tmp/mise.cache ]; then
-	~/.local/bin/mise activate zsh > /tmp/mise.cache
+	/opt/homebrew/bin/mise activate zsh > /tmp/mise.cache
 	zcompile /tmp/mise.cache
     fi
     source /tmp/mise.cache
@@ -88,10 +87,12 @@ alias gitb="git branch"
 # }}}
 # cli aliases {{{
 alias dots='/usr/bin/git --git-dir=$HOME/.dots/ --work-tree=$HOME'
+alias ls='ls -F --color=always'    
+alias la='ls -aF --color=always'
+alias ll='ls -lF --color=always'
 alias vim=nvim
 alias ks="kitten ssh"
 alias dircolors=gdircolors
 alias isonow='date -u +"%Y-%m-%dT%H:%M:%SZ"'
-alias morning='kinit -f && mwinit -f -s'
 # }}}
 

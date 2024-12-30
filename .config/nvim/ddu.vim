@@ -73,10 +73,13 @@ xnoremap <expr> ;r
 "      \ call ddu#ui#async_action('openFilterWindow')
 " Initialize ddu.vim lazily.
 if !'g:shougo_s_github_load_state'->exists()
-  call timer_start(1000, { _ -> LazyDdu() })
+  call timer_start(300, { _ -> LazyDdu() })
   function LazyDdu()
-    call ddu#load('ui', ['ff'])
-    call ddu#load('kind', ['file'])
+    call ddu#load('files', 'ui', ['ff'])
+    call ddu#load('files', 'kind', ['file'])
+    call ddu#load('files', 'source',
+          \    ['file_point', 'file_old', 'file_git', 'file']
+          \ )
   endfunction
 endif
 " }}}
