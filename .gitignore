@@ -1,2 +1,4 @@
 .dots
 **/*.DS_Store
+.config/kitty/env.conf
+
