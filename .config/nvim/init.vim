@@ -1,5 +1,3 @@
-colorscheme noirblaze
-
 if &compatible
   set nocompatible
 endif
@@ -18,11 +16,7 @@ catch
   set cmdheight=1
 endtry
 
-if has('nvim')
-  set foldcolumn=auto:1
-else
-  set foldcolumn=1
-endif
+set foldcolumn=0
 
 set title titlelen=95
 " cwd (without '~' prefix), task name, & a dirty flag (+)

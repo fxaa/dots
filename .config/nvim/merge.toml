@@ -8,4 +8,115 @@ repo = 'HealsCodes/vim-gas'
 repo = 'cespare/vim-toml'
 [[plugins]]
 repo = 'rbtnn/vim-vimscript_indentexpr'
-
+[[plugins]]
+repo = 'rebelot/kanagawa.nvim'
+[[plugins]]
+repo = 'AlexvZyl/nordic.nvim'
+[[plugins]]
+repo = 'sho-87/kanagawa-paper.nvim'
+[[plugins]]
+repo = 'fcancelinha/nordern.nvim'
+[[plugins]]
+repo = 'nyoom-engineering/oxocarbon.nvim'
+[[plugins]]
+repo = 'craftzdog/solarized-osaka.nvim'
+[[plugins]]
+repo = 'slugbyte/lackluster.nvim'
+[[plugins]]
+repo = 'ilof2/posterpole.nvim'
+[[plugins]]
+repo = 'Verf/deepwhite.nvim'
+[[plugins]]
+repo = 'diegoulloao/neofusion.nvim'
+[[plugins]]
+repo = 'fenetikm/falcon'
+[[plugins]]
+repo = 'razcoen/fleet.nvim'
+[[plugins]]
+repo = 'vague2k/vague.nvim'
+[[plugins]]
+repo = 'FrenzyExists/aquarium-vim'
+[[plugins]]
+repo = 'karoliskoncevicius/sacredforest-vim'
+[[plugins]]
+repo = 'jaredgorski/fogbell.vim'
+[[plugins]]
+repo = 'neanias/everforest-nvim'
+lua_source = '''
+  vim.cmd("colorscheme everforest")
+'''
+[[plugins]]
+repo = 'antonio-hickey/citrus-mist'
+[[plugins]]
+repo = 'Evalir/dosbox-vim-colorscheme'
+[[plugins]]
+repo = 'karoliskoncevicius/distilled-vim'
+[[plugins]]
+repo = 'yorickpeterse/vim-paper'
+[[plugins]]
+repo = 'bettervim/yugen.nvim'
+[[plugins]]
+repo = 'Enonya/yuyuko.vim'
+[[plugins]]
+repo = 'DryLabRebel/Squire'
+[[plugins]]
+repo = 'gregsexton/Gravity'
+[[plugins]]
+repo = 'atelierbram/Base2Tone-nvim'
+[[plugins]]
+repo = 'vim-scripts/Spacegray.vim'
+[[plugins]]
+repo = 'hexared/Hypsteria'
+[[plugins]]
+repo = 'bamzi/bamzi-theme'
+[[plugins]]
+repo = 'vim-scripts/The-Vim-Gardener'
+[[plugins]]
+repo = 'Donearm/Laederon'
+[[plugins]]
+repo = 'scolsen/bernhard'
+[[plugins]]
+repo = 'savq/melange-nvim'
+[[plugins]]
+repo = 'folke/tokyonight.nvim'
+[[plugins]]
+repo = 'rktjmp/lush.nvim'
+[[plugins]]
+repo = 'zenbones-theme/zenbones.nvim'
+depends = 'lush.nvim'
+[[plugins]]
+repo = 'shawnohare/hadalized.nvim'
+[[plugins]]
+repo = 'mstcl/dmg'
+[[plugins]]
+repo = 'ribru17/bamboo.nvim'
+[[plugins]]
+repo = 'timofurrer/edelweiss'
+[[plugins]]
+repo = 'alexblackie/lunarised'
+[[plugins]]
+repo = 'daschw/leaf.nvim'
+[[plugins]]
+repo = 'mstcl/ivory'
+[[plugins]]
+repo = 'mustardfrog/pinkish_day'
+[[plugins]]
+repo = 'SebastianZaha/nvim-solar-paper'
+[[plugins]]
+repo = 'holidaycereal/notation.nvim'
+[[plugins]]
+repo = 'Skullamortis/forest.nvim'
+[[plugins]]
+repo = 'gmr458/cold.nvim'
+[[plugins]]
+repo = 'jascha030/nitepal.nvim'
+[[plugins]]
+repo = 'friskenstein/focus.nvim'
+[[plugins]]
+repo = 'kordyte/collaterlie-nvim'
+[[plugins]]
+repo = 'xero/miasma.nvim'
+[[plugins]]
+repo = 'vim-scripts/wood.vim'
+[[plugins]]
+repo = 'antonk52/lake.nvim'
